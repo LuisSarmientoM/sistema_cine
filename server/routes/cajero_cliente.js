@@ -42,7 +42,7 @@ router.put('/cajero/edit/:id', (req, res) => {
     const { id } = req.params;
     const { identificacion, nombre, apellido } = req.body;
 
-    cajeroClienteControl.edit(Number(id), { identificacion, nombre, apellido });
+    cajeroClienteControl.edit(Number(id), { id: Number(id), identificacion, nombre, apellido });
     res.redirect('/cajero');
 });
 

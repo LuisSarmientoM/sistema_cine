@@ -19,7 +19,7 @@ class CajeroClienteControl {
     getUno(id = Number) {
         return this.cajeros.filter((cajero) => cajero.id === id)[0];
     }
-    edit(id = Number, dataCajero = { identificacion, nombre, apellido }) {
+    edit(id = Number, dataCajero = { id, identificacion, nombre, apellido }) {
         this.cajeros = this.cajeros.map((cajero) => {
             if (cajero.id === id) {
                 cajero = dataCajero;
