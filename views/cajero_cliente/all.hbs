@@ -1,0 +1,35 @@
+
+<div class="container mt-3">
+    <h1>Cajeros</h1>
+    <a class="btn btn-primary btn-block btn-lg my-3" type="button" href="/cajero/crear">
+        Crear Cajero
+    </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">identificacion </th>
+                <th scope="col">nombre</th>
+                <th scope="col">apellido</th>
+                {{!-- <th scope="col">No</th> --}}
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each cajeros}}
+            <tr>
+                <th>{{ identificacion }}</th>
+                <td>{{ nombre }}</td>
+                <td>{{ apellido }}</td>
+                {{!-- <td>{{ nombreCajero }}</td> --}}
+                <td>
+                    <a type="button" class="btn btn-warning" href="/cajero/edit/{{id}}">Editar</a>
+                    <form action="/cajero/delete/{{id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
