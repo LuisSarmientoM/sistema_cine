@@ -43,6 +43,52 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 1592756812092,
+            "numeroSala": "2",
+            "pelicula": "",
+            "numeroSillas": 3,
+            "sillas": [
+                {
+                    "numeroSillas": "3",
+                    "fila": "a",
+                    "numeros": [
+                        { "numero": 1, "ocupada": false },
+                        { "numero": 2, "ocupada": false },
+                        { "numero": 3, "ocupada": false }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1592756820453,
+            "numeroSala": "3",
+            "pelicula": "",
+            "numeroSillas": 15,
+            "sillas": [
+                {
+                    "numeroSillas": "15",
+                    "fila": "a",
+                    "numeros": [
+                        { "numero": 1, "ocupada": false },
+                        { "numero": 2, "ocupada": false },
+                        { "numero": 3, "ocupada": false },
+                        { "numero": 4, "ocupada": false },
+                        { "numero": 5, "ocupada": false },
+                        { "numero": 6, "ocupada": false },
+                        { "numero": 7, "ocupada": false },
+                        { "numero": 8, "ocupada": false },
+                        { "numero": 9, "ocupada": false },
+                        { "numero": 10, "ocupada": false },
+                        { "numero": 11, "ocupada": false },
+                        { "numero": 12, "ocupada": false },
+                        { "numero": 13, "ocupada": false },
+                        { "numero": 14, "ocupada": false },
+                        { "numero": 15, "ocupada": false }
+                    ]
+                }
+            ]
         }
     ]
 }

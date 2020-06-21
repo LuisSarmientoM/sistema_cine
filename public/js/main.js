@@ -1,5 +1,5 @@
 const numeroSala = document.getElementById('fila');
-
+const optionsSala = document.getElementById('sala');
 function agregarFila() {
     const fila = document.createElement('div');
     fila.setAttribute('class', 'form-group');

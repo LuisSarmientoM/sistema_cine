@@ -4,10 +4,9 @@ const router = express.Router();
 const { SalaControl } = require('../controller/sala.control');
 const salaControl = new SalaControl();
 
-const fila = ['a', 'b'];
 // Nueva sala
 router.get('/salas/crear', (req, res) => {
-    return res.render('salas/nuevo', { fila });
+    return res.render('salas/nuevo');
 });
 
 router.post('/salas/crear', (req, res) => {

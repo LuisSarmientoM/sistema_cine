@@ -1,0 +1,35 @@
+
+<div class="container mt-3">
+    <h1>Peliculas</h1>
+    
+    <a class="btn btn-primary btn-block btn-lg my-3" type="button" href="/peliculas/crear">
+        Crear Sala
+    </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"># nombre </th>
+                <th scope="col">sala</th>
+                <th scope="col">descripcion</th>
+                {{!-- <th scope="col">No</th> --}}
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each peliculas}}
+            <tr>
+                <th>{{ nombre }}</th>
+                <td>{{ sala }}</td>
+                <td>{{ descripcion }}</td>
+                <td>
+                    <a type="button" class="btn btn-warning" href="/peliculas/edit/{{id}}">Editar</a>
+                    <form action="/peliculas/delete/{{id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

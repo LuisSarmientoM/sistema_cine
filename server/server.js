@@ -20,6 +20,9 @@ app.engine(
         layoutsDir: path.join(app.get('views'), 'layouts'),
         partialsDir: path.join(app.get('views'), 'partials'),
         extname: '.hbs',
+        helpers: {
+            selected: (sala, idSala) => (sala === idSala ? 'selected' : ''),
+        },
     })
 );
 app.set('view engine', '.hbs');
