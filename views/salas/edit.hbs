@@ -1,0 +1,27 @@
+<form action="/salas/edit/{{id}}?_method=PUT" method="POST" class="w-50 m-auto" id="form">
+<input type="hidden" name="_method" value="PUT">
+    <div class="form-group"  id="numeroSala">
+        <label for="identificacion">Numero de la Sala</label>
+        <input class="form-control" type="number" name="numeroSala" value="{{numeroSala}}">
+    </div>
+
+    <div id="fila">
+        {{#each sillas }}
+            <label >Fila</label>
+            <input class="form-control" type="text" name="{{fila}}" value="{{ fila }}">
+            
+            <label ># sillas</label>
+            <input class="form-control" type="number" name="{{ fila }}" value="{{ numeroSillas }}">
+        {{/each}}
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-block" type="button" onclick="agregarFila();">
+            Agregar Fila
+        </button>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">
+            Guardar
+        </button>
+    </div>
+</form>

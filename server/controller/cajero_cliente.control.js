@@ -10,7 +10,7 @@ class CajeroClienteControl {
     }
 
     crear(cajero = { identificacion, nombre, apellido }) {
-        this.cajeros.push({ id: this.cajeros.length + 1, ...cajero });
+        this.cajeros.push({ id: Date.now(), ...cajero });
         this.actualizarArchivo();
     }
     getAll() {

@@ -2,6 +2,7 @@
     "cajero_cliente": [
         { "id": 2, "identificacion": "123", "nombre": "Juan", "apellido": "Torres Arias" },
         { "id": 3, "identificacion": 1234, "nombre": "Pedro", "apellido": "Tapia" },
+        { "id": 4, "identificacion": "123", "nombre": "Luis", "apellido": "Sarmiento" },
         { "id": 4, "identificacion": "123", "nombre": "Luis", "apellido": "Sarmiento" }
     ]
 }

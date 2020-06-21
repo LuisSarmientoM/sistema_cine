@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { CajeroClienteControl } = require('../controller/cajerocliente.control');
+const { CajeroClienteControl } = require('../controller/cajero_cliente.control');
 const cajeroClienteControl = new CajeroClienteControl();
 
 // Nuevo cliente o Cajero
@@ -11,6 +11,8 @@ router.get('/cajero/crear', (req, res) => {
 });
 router.post('/cajero/crear', async (req, res) => {
     const { identificacion, nombre, apellido } = req.body;
+
+    console.log(req.body);
 
     await cajeroClienteControl.crear({ identificacion, nombre, apellido });
 
@@ -23,7 +25,7 @@ router.get('/cajero', (req, res) => {
     const cajeros = cajeroClienteControl.getAll();
 
     res.render('cajero_cliente/all', {
-        title: 'Cajero y Clientes editado',
+        title: 'Cajero y Clientes',
         year: new Date().getFullYear(),
         cajeros,
     });
