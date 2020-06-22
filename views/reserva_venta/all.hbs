@@ -1,0 +1,40 @@
+
+
+<div class="container mt-3">
+    <h1>Reservas y Ventas</h1>
+        <a class="btn btn-primary btn-block btn-lg my-3" type="button" href="/reservas/crear">
+            Crear nueva Reserva o Venta
+        </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Silla</th>
+                <th scope="col">Pelicula</th>
+                <th scope="col">Sala</th>
+                {{!-- <th scope="col">No</th> --}}
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each reserva_venta}}
+            <tr>
+                <th>{{ tipo }}</th>
+                <td>{{ valor }}</td>
+                <td>{{ silla.fila }} - {{ silla.numero }}</td>
+                <td>{{ pelicula }}</td>
+                <td>{{ sala }}</td>
+                <td>
+                    <a type="button" class="btn btn-warning" href="/reservas/editar/{{id}}">Editar</a>
+                    <form action="/reservas/delete/{{id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

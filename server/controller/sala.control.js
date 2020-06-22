@@ -1,23 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-/* class sala {
-    constructor() {
-        id: Number;
-        numeroSala: Number;
-        sillas: [
-            {
-                fila: String,
-                numeros: [
-                    {
-                        numero: Number,
-                        ocupada: Boolean,
-                    },
-                ],
-            },
-        ];
-    }
-} */
 class SalaControl {
     constructor() {
         this.salas = [];
@@ -48,6 +31,21 @@ class SalaControl {
         return this.salas.filter((sala) => sala.id === id)[0];
     }
 
+    getNumeroSilla(id, fila) {
+        return this.salas
+            .filter((sala) => sala.id === id)[0]
+            .sillas.filter((numero) => numero.fila === fila)[0]
+            .numeros.filter((numero) => numero.ocupada !== true);
+    }
+
+    actualizarSilla(id, silla) {
+        this.getUno(id)
+            .sillas.filter((numeros) => numeros.fila === silla.fila)[0]
+            .numeros.filter((numero) => numero.numero === silla.numero)[0].ocupada = true;
+
+        this.actualizarArchivo();
+    }
+
     edit(id = Number, dataSala) {
         const { numeroSala, numeroSillas, sillas } = this.transformData(dataSala);
 
@@ -63,11 +61,12 @@ class SalaControl {
             }
             return sala;
         });
-        this.actualizarArchivo();
+        // this.actualizarArchivo();
     }
 
     eliminar(id = Number) {
         this.salas = this.salas.filter((sala) => sala.id !== id);
+
         this.actualizarArchivo();
     }
 

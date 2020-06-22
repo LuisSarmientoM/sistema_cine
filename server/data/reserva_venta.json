@@ -1,0 +1,1 @@
+{"reserva_venta":[{"tipo":"Venta","valor":1200,"pelicula":"Vengadores","idPelicula":"Vengadores","idSala":1592753651604,"sala":"1","silla":{"fila":"a","numero":9},"id":1592833467796},{"tipo":"Venta","valor":12000,"pelicula":"Vengadores","idPelicula":"Vengadores","idSala":1592753651604,"sala":"1","silla":{"fila":"a","numero":7},"id":1592833490861}]}

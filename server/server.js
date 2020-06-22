@@ -22,6 +22,8 @@ app.engine(
         extname: '.hbs',
         helpers: {
             selected: (sala, idSala) => (sala === idSala ? 'selected' : ''),
+            year: () => new Date().getFullYear(),
+            returnSala: (salas) => ({ ...salas }),
         },
     })
 );

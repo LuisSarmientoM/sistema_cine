@@ -1,0 +1,39 @@
+<form action="/reservas/crear/seleccionarNumero" method="POST" class="w-50 m-auto" id="form">
+    
+    <div class="form-group">
+        <label for="tipo">Tipo de Registro</label>
+        <input class="form-control" type="text" readonly name="tipo" value="{{tipo}}">
+    </div>
+    <div class="form-group">
+        <label for="valor">Valor</label>
+        <input class="form-control" type="text" readonly name="valor" value="{{valor}}">
+    </div>
+    <div class="form-group">
+        <label for="valor">pelicula</label>
+        <input class="form-control" type="text" name="pelicula" value="{{pelicula}}" readonly>
+        <input class="form-control" type="hidden" name="idPelicula" value="{{idPelicula}}" readonly>
+    </div>
+    <div class="form-group">
+        <label for="idSala">Sala de emision</label>
+        <input class="form-control" type="hidden" readonly name="idSala" value="{{idSala}}">
+        <input class="form-control" type="text" readonly name="sala" value="{{sala}}">
+    </div>
+    
+    <div class="form-group">
+        <label for="valor">Selecciona una fila</label>
+        <select class="form-control" name="fila">
+            <option>Selecciona una sala</option>
+            {{#each filas }}
+                <option value="{{fila}}">
+                    {{fila}}
+                </option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">
+            Continuar
+        </button>
+    </div>
+</form>

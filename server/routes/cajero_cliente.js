@@ -9,13 +9,9 @@ const cajeroClienteControl = new CajeroClienteControl();
 router.get('/cajero/crear', (req, res) => {
     res.render('cajero_cliente/nuevo');
 });
-router.post('/cajero/crear', async (req, res) => {
+router.post('/cajero/crear', (req, res) => {
     const { identificacion, nombre, apellido } = req.body;
-
-    console.log(req.body);
-
-    await cajeroClienteControl.crear({ identificacion, nombre, apellido });
-
+    cajeroClienteControl.crear({ identificacion, nombre, apellido });
     res.redirect('/cajero');
 });
 
@@ -26,7 +22,6 @@ router.get('/cajero', (req, res) => {
 
     res.render('cajero_cliente/all', {
         title: 'Cajero y Clientes',
-        year: new Date().getFullYear(),
         cajeros,
     });
 });
