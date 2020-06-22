@@ -1,1 +1,3 @@
-{"peliculas":[{"id":1592753651602,"nombre":"Avengers","idSala":1592756812092,"sala":"2","descripcion":"Pelicula de los vengadores"},{"nombre":"Avengers","idSala":"1592753651604","descripcion":"Pelicula de los vengadores edit","sala":"1"},{"id":1592759687027,"nombre":"Avatar","idSala":1592756820453,"descripcion":"qwe","sala":"3"}]}
+{
+    "peliculas": []
+}
