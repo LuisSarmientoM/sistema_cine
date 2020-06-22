@@ -1,3 +1,42 @@
 {
-    "salas": []
+    "salas": [
+        {
+            "id": 1592836242683,
+            "numeroSala": "1",
+            "pelicula": "",
+            "numeroSillas": 12,
+            "sillas": [
+                {
+                    "numeroSillas": "3",
+                    "fila": "a",
+                    "numeros": [
+                        { "numero": 1, "ocupada": false },
+                        { "numero": 2, "ocupada": false },
+                        { "numero": 3, "ocupada": false }
+                    ]
+                },
+                {
+                    "numeroSillas": "4",
+                    "fila": "b",
+                    "numeros": [
+                        { "numero": 1, "ocupada": false },
+                        { "numero": 2, "ocupada": false },
+                        { "numero": 3, "ocupada": false },
+                        { "numero": 4, "ocupada": false }
+                    ]
+                },
+                {
+                    "numeroSillas": "5",
+                    "fila": "c",
+                    "numeros": [
+                        { "numero": 1, "ocupada": false },
+                        { "numero": 2, "ocupada": false },
+                        { "numero": 3, "ocupada": false },
+                        { "numero": 4, "ocupada": false },
+                        { "numero": 5, "ocupada": false }
+                    ]
+                }
+            ]
+        }
+    ]
 }

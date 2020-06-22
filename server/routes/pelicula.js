@@ -6,14 +6,14 @@ const { SalaControl } = require('../controller/sala.control');
 const peliculaControl = new PeliculaControl();
 const salaControl = new SalaControl();
 
-const salas = salaControl.getAll();
-
 // Nueva Pelicula
 router.get('/peliculas/crear', (req, res) => {
+    const salas = salaControl.getAll();
     return res.render('peliculas/nuevo', { salas });
 });
 
 router.post('/peliculas/crear', (req, res) => {
+    const salas = salaControl.getAll();
     req.body.idSala = Number(req.body.idSala);
     req.body.sala = salas.filter((sala) => sala.id == req.body.idSala)[0].numeroSala;
 
@@ -43,6 +43,8 @@ router.get('/peliculas/edit/:id', (req, res) => {
 
 router.put('/peliculas/edit/:id', (req, res) => {
     const { id } = req.params;
+    const salas = salaControl.getAll();
+
     delete req.body._method;
 
     req.body.sala = salas.filter((sala) => sala.id == req.body.idSala)[0].numeroSala;
