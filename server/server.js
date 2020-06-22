@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const morgan = require('morgan');
 const methodOverride = require('method-override');
 // init
 const app = express();
@@ -31,7 +30,7 @@ app.engine(
 app.set('view engine', '.hbs');
 
 // Middelware
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
