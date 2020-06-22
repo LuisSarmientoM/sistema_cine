@@ -16,7 +16,7 @@ class PeliculaControl {
         Pelicula.id = Date.now();
         this.peliculas.push({ ...Pelicula });
         salaControl.actualizarPelicula(Pelicula.idSala, Pelicula.id, Pelicula.nombre);
-        // this.actualizarArchivo();
+        this.actualizarArchivo();
     }
     getAll() {
         return this.peliculas;
