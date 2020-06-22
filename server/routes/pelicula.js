@@ -25,7 +25,6 @@ router.post('/peliculas/crear', (req, res) => {
 
 router.get('/peliculas', (req, res) => {
     const peliculas = peliculaControl.getAll();
-
     return res.render('peliculas/all', {
         title: 'Salas',
         peliculas,

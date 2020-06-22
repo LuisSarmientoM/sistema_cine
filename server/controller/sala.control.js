@@ -16,6 +16,7 @@ class SalaControl {
             id: Date.now(),
             numeroSala,
             pelicula: '',
+            idPelicula: '',
             numeroSillas,
             sillas,
         });
@@ -42,6 +43,13 @@ class SalaControl {
         this.getUno(id)
             .sillas.filter((numeros) => numeros.fila === silla.fila)[0]
             .numeros.filter((numero) => numero.numero === silla.numero)[0].ocupada = true;
+
+        this.actualizarArchivo();
+    }
+
+    actualizarPelicula(id, idPelicula, pelicula) {
+        this.getUno(id).pelicula = pelicula;
+        this.getUno(id).idPelicula = idPelicula;
 
         this.actualizarArchivo();
     }

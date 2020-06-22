@@ -1,7 +1,9 @@
 // Logica para el control de cajeros y clientes
 const fs = require('fs');
 const path = require('path');
+const { SalaControl } = require('./sala.control');
 
+const salaControl = new SalaControl();
 class PeliculaControl {
     constructor() {
         this.peliculas = [];
@@ -11,8 +13,10 @@ class PeliculaControl {
     }
 
     crear(Pelicula = { nombre, idSala, sala, descripcion }) {
-        this.peliculas.push({ id: Date.now(), ...Pelicula });
-        this.actualizarArchivo();
+        Pelicula.id = Date.now();
+        this.peliculas.push({ ...Pelicula });
+        salaControl.actualizarPelicula(Pelicula.idSala, Pelicula.id, Pelicula.nombre);
+        // this.actualizarArchivo();
     }
     getAll() {
         return this.peliculas;
