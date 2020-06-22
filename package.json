@@ -16,7 +16,8 @@
         "handlebars": "^4.5.0",
         "hbs": "^4.1.1",
         "http": "0.0.1-security",
-        "method-override": "^3.0.0"
+        "method-override": "^3.0.0",
+        "nodemon": "^2.0.4"
     },
     "devDependencies": {
         "@types/bootstrap": "^4.5.0",
